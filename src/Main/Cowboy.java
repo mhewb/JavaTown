@@ -6,7 +6,7 @@ public class Cowboy extends Human {
     private String adjective;
 
     public Cowboy(String name) {
-        super(name);
+        super(name, "whisky");
         this.popularity = 0;
         this.adjective = "Valiant";
     }
@@ -17,6 +17,13 @@ public class Cowboy extends Human {
                 "popularity=" + popularity +
                 ", adjective='" + adjective + '\'' +
                 '}';
+    }
+
+    @Override
+    public void introduceYourself() {
+        super.introduceYourself();
+        this.speak("People tells me that I am " + this.adjective + ".");
+        this.speak("I am quite popular (" + this.popularity + ").");
     }
 
     public void shout() {

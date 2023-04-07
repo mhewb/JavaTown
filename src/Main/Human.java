@@ -3,12 +3,18 @@ package Main;
 public class Human {
 
     private final String name;
-    protected String favoriteDrink;
+    private String favoriteDrink;
 
     public Human(String name) {
         this.name = name;
         this.favoriteDrink = "water";
     }
+
+    public Human(String name, String favoriteDrink) {
+        this.name = name;
+        this.favoriteDrink = favoriteDrink;
+    }
+
 
     @Override
     public String toString() {

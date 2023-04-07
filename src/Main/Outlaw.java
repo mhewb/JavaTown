@@ -8,7 +8,7 @@ public class Outlaw extends Human {
     private boolean isCaught;
 
     public Outlaw(String name) {
-        super(name);
+        super(name, "hooch");
         this.look = "dangerous";
         this.nbOfCaptives = 0;
         this.reward = 100.0f;
@@ -23,6 +23,18 @@ public class Outlaw extends Human {
                 ", reward=" + reward +
                 ", isCaught=" + isCaught +
                 '}';
+    }
+
+    @Override
+    public void introduceYourself() {
+        super.introduceYourself();
+        this.speak("I am a bad guy and I already captured " + this.nbOfCaptives + "women !");
+        this.speak("There's a $"+ this.reward + " bounty on my head.");
+    }
+
+    @Override
+    public String getName() {
+        return super.getName() + " the " + this.look ;
     }
 
     // GETTER

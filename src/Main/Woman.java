@@ -6,7 +6,7 @@ public class Woman extends Human {
     private boolean isCaught;
 
     public Woman(String name) {
-        super(name);
+        super(name, "milk");
         this.dressColor = "red";
         this.isCaught = false;
     }
@@ -19,6 +19,11 @@ public class Woman extends Human {
                 '}';
     }
 
+    @Override
+    public String getName() {
+        return "Miss " + super.getName();
+    }
+
     public String getDressColor() {
         return dressColor;
     }
@@ -29,7 +34,7 @@ public class Woman extends Human {
 
     public void changeDressColor(String newColor){
         this.dressColor = newColor;
-        System.out.println("Look at my new " + this.dressColor + " dress!");
+        this.speak("Look at my new " + this.dressColor + " dress!");
     }
 
     public void setFree() {
