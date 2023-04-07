@@ -54,9 +54,13 @@ public class Outlaw extends Human {
         return isCaught;
     }
 
+    public void doubleReward() {
+        this.reward = this.reward * 2;
+    }
+
     public void addCaptive() {
         this.nbOfCaptives++;
-        this.reward += 100.1f;
+//        this.reward += 100.1f;
     }
 
     public void setFree() {

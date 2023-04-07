@@ -3,12 +3,12 @@ package Main;
 public class Cowboy extends Human {
 
     private int popularity;
-    private String adjective;
+    protected String adjective;
 
     public Cowboy(String name) {
         super(name, "whisky");
         this.popularity = 0;
-        this.adjective = "Valiant";
+        this.adjective = "valiant";
     }
 
     @Override
