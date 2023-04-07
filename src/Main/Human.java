@@ -1,15 +1,18 @@
+package Main;
+
 public class Human {
 
-    private String name;
-    private String favoriteDrink;
+    private final String name;
+    protected String favoriteDrink;
 
     public Human(String name) {
         this.name = name;
+        this.favoriteDrink = "water";
     }
 
     @Override
     public String toString() {
-        return "Human{" +
+        return "Main.Human{" +
                 "name='" + this.name + '\'' +
                 ", favoriteDrink='" + this.favoriteDrink + '\'' +
                 ", at='" + this.hashCode() + '\'' +
@@ -24,18 +27,18 @@ public class Human {
         return favoriteDrink;
     }
 
-    protected void speaks(String sentence) {
+    public void speak(String sentence) {
         System.out.println(this.getName() + " - " + sentence);
     }
 
-    protected void introduceYourself() {
+    public void introduceYourself() {
         System.out.println(
                 "Hello, my name is " + this.getName() +
-                " and I like my " + getFavoriteDrink() + "with some ice.");
+                " and I like my " + getFavoriteDrink() + " with some ice.");
     }
 
-    protected void drink() {
-        System.out.println("Ah ! A good ol'" + getFavoriteDrink() + "! GLOUPS!");
+    public void drink() {
+        System.out.println("Ah ! A good ol'" + getFavoriteDrink() + " glass! GLOUPS!");
     }
 
 }
