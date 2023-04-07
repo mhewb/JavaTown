@@ -7,6 +7,15 @@ public class Human {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + this.name + '\'' +
+                ", favoriteDrink='" + this.favoriteDrink + '\'' +
+                ", at='" + this.hashCode() + '\'' +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
