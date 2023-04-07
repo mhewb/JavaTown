@@ -28,17 +28,17 @@ public class Human {
     }
 
     public void speak(String sentence) {
-        System.out.println(this.getName() + " - " + sentence);
+        System.out.println(
+                " (" + this.getName() + ") - " + sentence);
     }
 
     public void introduceYourself() {
-        System.out.println(
-                "Hello, my name is " + this.getName() +
+        this.speak("Hello, my name is " + this.getName() +
                 " and I like my " + getFavoriteDrink() + " with some ice.");
     }
 
     public void drink() {
-        System.out.println("Ah ! A good ol'" + getFavoriteDrink() + " glass! GLOUPS!");
+        this.speak("Ah ! A good ol'" + getFavoriteDrink() + " glass! GLOUPS!");
     }
 
 }
