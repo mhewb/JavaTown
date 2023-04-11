@@ -20,17 +20,18 @@ public class Sheriff extends Cowboy {
         this.speak("I caught " + this.nbOfCaptives + " outlaws!");
     }
 
-    public void putInJail(Outlaw outlaw) {
-        this.capture(outlaw);
+    public void putInJail(Bandit bandit) {
+        bandit.isCaptured();
+        bandit.speak("Damn, I got caught! " + this.getName() + ", you got me!");
         this.speak("In the name of the law, I arrest you!");
     }
 
-    public void researchOutlaw(Outlaw outlaw) {
-        outlaw.doubleReward();
+    public void researchOutlaw(Bandit bandit) {
+        bandit.doubleReward();
         System.out.println("Sheriff" + this.getName() + "puts up posters all over the city.");
         this.speak(
-                "Hear ye, hear ye good people, $" + outlaw.getReward()
-                + "to the one who will arrest " + outlaw.getName() + " the outlaw, dead or alive!"
+                "Hear ye, hear ye good people, $" + bandit.getReward()
+                + "to the one who will arrest " + bandit.getName() + " the bandit, dead or alive!"
         );
     }
 

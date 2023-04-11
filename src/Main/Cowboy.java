@@ -30,21 +30,15 @@ public class Cowboy extends Human {
         this.speak("Take this, villain!");
     }
 
-    public void shot(Outlaw outlaw) {
+    public void shot(Bandit bandit) {
         this.speak("The " + this.adjective + " " + this.getName() +
-                " shot " + outlaw.getName() + ". PAN!");
+                " shot " + bandit.getName() + ". PAN!");
     }
 
     public void setFree(Woman woman) {
         woman.setFree();
         this.speak(woman.getName() + " you are now free!");
     }
-
-    public void capture(Outlaw outlaw) {
-        outlaw.isCaptured();
-        outlaw.speak("Damn, I got caught! " + this.getName() + ", you got me!");
-    }
-
 
 
 }

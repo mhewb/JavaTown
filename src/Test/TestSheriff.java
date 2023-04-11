@@ -1,6 +1,6 @@
 package Test;
+import Main.Bandit;
 import Main.Sheriff;
-import Main.Outlaw;
 import Main.Woman;
 
 
@@ -13,9 +13,9 @@ public class TestSheriff {
         testSheriffDrinks();
         testSheriffIntroduction();
         testSheriffShout();
-        testSheriffShotOutlaw();
+        testSheriffShotBandit();
         testSheriffSetFreeWoman();
-        testSheriffCaptureOutlaw();
+        testSheriffCaptureBandit();
 
     }
 
@@ -44,10 +44,10 @@ public class TestSheriff {
         sheriff.shout();
     }
 
-    public static void testSheriffShotOutlaw() {
+    public static void testSheriffShotBandit() {
         Sheriff sheriff = testMakeSheriff();
-        Outlaw outlaw = new Outlaw("Gaëtan");
-        sheriff.shot(outlaw);
+        Bandit bandit = new Bandit("Gaëtan");
+        sheriff.shot(bandit);
     }
 
     public static void testSheriffSetFreeWoman() {
@@ -56,9 +56,9 @@ public class TestSheriff {
         sheriff.setFree(woman);
     }
 
-    public static void testSheriffCaptureOutlaw() {
+    public static void testSheriffCaptureBandit() {
         Sheriff sheriff = testMakeSheriff();
-        Outlaw outlaw = new Outlaw("Gaëtan");
-        sheriff.capture(outlaw);
+        Bandit bandit = new Bandit("Gaëtan");
+        sheriff.putInJail(bandit);
     }
 }
